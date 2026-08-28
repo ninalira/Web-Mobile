@@ -2,7 +2,7 @@ export default function Exercicio210() {
   return (
     <div
       style={{
-        backgroundImage: "url('/bg.jpg')",
+        backgroundImage: "url('/imagemCSS.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

@@ -1,45 +1,51 @@
-const produtos = [
-  { nome: "Tênis A", preco: "R$ 199,90", imagem: "/tenis1.jpg" },
-  { nome: "Tênis B", preco: "R$ 249,90", imagem: "/tenis2.jpg" },
-  { nome: "Tênis C", preco: "R$ 179,90", imagem: "/tenis3.jpg" },
-  { nome: "Tênis D", preco: "R$ 299,90", imagem: "/tenis4.jpg" },
-  { nome: "Tênis E", preco: "R$ 159,90", imagem: "/tenis5.jpg" },
-];
-
 export default function Exercicio4() {
+  const produtos = [
+    { nome: "Salto azul", preco: "R$ 199,90", imagem: "/sandalia1.jpg" },
+    { nome: "Sandila salto baixo", preco: "R$ 119,90", imagem: "/sandalia2.jpg" },
+    { nome: "Salto alto branco", preco: "R$ 179,90", imagem: "/sandalia3.jpg" },
+    { nome: "Salto marrom", preco: "R$ 179,90", imagem: "/sandalia4.jpg" },
+    { nome: "sandalia de salto vermelha", preco: "R$ 159,90", imagem: "/sandalia5.jpg" },
+  ];
+
+  const estiloCard = {
+    backgroundColor: "#66bb6a",
+    color: "white",
+    padding: "10px",
+    width: "180px",
+    textAlign: "center",
+  };
+
+  const estiloImagem = {
+    width: "100%",
+  };
+
+  const estiloLista = {
+    display: "flex",
+    gap: "80px",
+    padding: "50px",
+  };
+
+  const estiloRodape = {
+    backgroundColor: "#757575",
+    color: "white",
+    textAlign: "center",
+    padding: "15px",
+  };
+
   return (
     <div>
-      <div style={{ display: "flex", gap: "10px", padding: "20px" }}>
+      <div style={estiloLista}>
         {produtos.map((produto) => (
-          <div
-            key={produto.nome}
-            style={{
-              backgroundColor: "green",
-              color: "white",
-              padding: "10px",
-              width: "150px",
-              textAlign: "center",
-            }}
-          >
-            <img
-              src={produto.imagem}
-              alt={produto.nome}
-              style={{ width: "100%" }}
-            />
+          <div key={produto.nome} style={estiloCard}>
+            <img src={produto.imagem} alt={produto.nome} style={estiloImagem} />
             <p>{produto.nome}</p>
             <p>{produto.preco}</p>
           </div>
         ))}
       </div>
-      <footer
-        style={{
-          backgroundColor: "gray",
-          color: "white",
-          textAlign: "center",
-          padding: "15px",
-        }}
-      >
-        Loja de Calçados Exemplo
+
+      <footer style={estiloRodape}>
+        Loja de Calcados Nina
       </footer>
     </div>
   );
