@@ -1,0 +1,172 @@
+:root {
+  --cor-fundo: #f3f4f6;
+  --cor-card: #ffffff;
+  --cor-borda: #1f2937;
+  --cor-primaria: #2563eb;
+  --cor-primaria-hover: #1d4ed8;
+  --cor-texto: #111827;
+  --cor-texto-suave: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+.pagina {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.jogo-dados {
+  width: 100%;
+  max-width: 420px;
+  background: var(--cor-card);
+  border: 2px solid var(--cor-borda);
+  border-radius: 20px;
+  padding: 28px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+}
+
+.jogo-dados h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.rodada-atual {
+  margin: 0;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+}
+
+.jogadores {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 16px;
+}
+
+.divisor {
+  width: 1px;
+  background: #d1d5db;
+}
+
+.jogador {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.jogador h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dados-jogador {
+  display: flex;
+  gap: 8px;
+}
+
+.dado {
+  width: 68px;
+  height: 68px;
+  display: block;
+}
+
+.dado-vazio {
+  border: 2px dashed #9ca3af;
+  border-radius: 14px;
+  color: #9ca3af;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-jogar {
+  min-width: 90px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 2px solid var(--cor-borda);
+  background: var(--cor-primaria);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.botao-jogar:hover:not(:disabled) {
+  background: var(--cor-primaria-hover);
+}
+
+.botao-jogar:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.botao-jogar:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  border-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.mensagem {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  background: #f9fafb;
+}
+
+.botao-jogar-novamente {
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: 2px solid var(--cor-borda);
+  background: #111827;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao-jogar-novamente:hover {
+  background: #000;
+}
+
+.placar {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--cor-texto-suave);
+  text-align: center;
+}
